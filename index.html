@@ -1,1 +1,291 @@
-# -2030
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>رؤية الإمارات 2030 | مستقبل مستدام</title>
+    <style>
+        /* إعدادات الخطوط والألوان الفخمة */
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700;900&display=swap');
+
+        :root {
+            --bg-dark: #0a0b10;
+            --card-bg: #12141c;
+            --gold: #d4af37;
+            --gold-hover: #f3e5ab;
+            --text-light: #ffffff;
+            --text-muted: #a0aec0;
+            --uae-green: #00732f;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cairo', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            overflow-x: hidden;
+        }
+
+        /* الهيدر والقائمة */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px 8%;
+            background: rgba(10, 11, 16, 0.95);
+            backdrop-filter: blur(10px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 900;
+            color: var(--gold);
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+        }
+
+        nav a {
+            color: var(--text-light);
+            text-decoration: none;
+            margin-right: 30px;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--gold);
+        }
+
+        /* القسم الرئيسي (البانر) */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+            background: radial-gradient(circle at center, rgba(0, 115, 47, 0.15) 0%, rgba(10, 11, 16, 1) 70%);
+            border-bottom: 2px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #fff, var(--gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            color: var(--text-muted);
+            max-width: 800px;
+            margin-bottom: 40px;
+        }
+
+        /* الأقسام العامة */
+        section {
+            padding: 100px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--gold);
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: var(--uae-green);
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+
+        /* شبكة الكروت (المحاور والمبادرات) */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 40px 30px;
+            border-radius: 15px;
+            border: 1px solid rgba(212, 175, 55, 0.05);
+            transition: 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--gold);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(212, 175, 55, 0.3);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .card h3 {
+            font-size: 1.6rem;
+            color: var(--text-light);
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            line-height: 1.8;
+        }
+
+        /* لوحة الشرف والمعلومات الرسمية */
+        .credits-section {
+            background: linear-gradient(135deg, #12141c 0%, #0a0b10 100%);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 20px;
+            padding: 50px;
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+
+        .credit-box {
+            padding: 20px;
+        }
+
+        .credit-box span {
+            display: block;
+            font-size: 0.9rem;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .credit-box h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--text-light);
+        }
+
+        /* الفوتر */
+        footer {
+            background: #050608;
+            padding: 30px;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(212, 175, 55, 0.05);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- الهيدر والقائمة -->
+    <header>
+        <div class="logo">رؤية الإمارات 2030</div>
+        <nav>
+            <a href="#home">الرئيسية</a>
+            <a href="#pillars">محاور الرؤية</a>
+            <a href="#projects">المبادرات المستقبلية</a>
+            <a href="#credits">لوحة الشرف</a>
+        </nav>
+    </header>
+
+    <!-- القسم الرئيسي -->
+    <section id="home" class="hero">
+        <h1>صياغة المستقبل واستدامة الريادة</h1>
+        <p>نحو بيئة اقتصادية واجتماعية وتنموية متكاملة تضع دولة الإمارات في صدارة دول العالم بحلول عام 2030.</p>
+    </section>
+
+    <!-- محاور الرؤية -->
+    <section id="pillars">
+        <h2 class="section-title">محاور الاستراتيجية الوطنية</h2>
+        <div class="grid-container">
+            <div class="card">
+                <h3>01. الاقتصاد المعرفي المستدام</h3>
+                <p>التحول نحو اقتصاد قائم على الابتكار، دعم الصناعات التكنولوجية المتقدمة، وبناء قطاعات استثمارية مرنة تضمن الازدهار للأجيال القادمة.</p>
+            </div>
+            <div class="card">
+                <h3>02. بيئة وبنية تحتية مستدامة</h3>
+                <p>دمج التكنولوجيا الخضراء في البنية التحتية، تعزيز كفاءة الطاقة النظيفة والمتجددة، وحماية الموارد الطبيعية الفريدة للدولة.</p>
+            </div>
+            <div class="card">
+                <h3>03. نظام تعليمي وصحي عالمي</h3>
+                <p>تطوير منظومة تعليمية تستشرف المستقبل وتركز على الذكاء الاصطناعي، وتقديم رعاية صحية متكاملة وفقاً لأعلى المعايير الدولية.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- المبادرات المستقبلية -->
+    <section id="projects" style="background-color: #0d0f16;">
+        <h2 class="section-title">مبادرات ومشاريع كبرى</h2>
+        <div class="grid-container">
+            <div class="card">
+                <h3>التحول الرقمي الشامل</h3>
+                <p>اعتماد الذكاء الاصطناعي والخدمات الحكومية الذكية بنسبة 100% لتسهيل جودة الحياة وتوطين التكنولوجيا المتقدمة.</p>
+            </div>
+            <div class="card">
+                <h3>الطاقة المتجددة 2030</h3>
+                <p>رفع مساهمة الطاقة النظيفة (الشمسية والنووية السلمية) لتأمين مستقبل طاقة آمن ومستدام لجميع القطاعات.</p>
+            </div>
+            <div class="card">
+                <h3>استراتيجية الفضاء الوطنية</h3>
+                <p>تأهيل الكوادر الوطنية الشابة لقيادة قطاع الفضاء والأبحاث العلمية، وترسيخ مكانة الدولة كمركز إقليمي لعلوم الفلك.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- لوحة الشرف التقديرية (البيانات المطلوبة) -->
+    <section id="credits">
+        <h2 class="section-title">بطاقة هوية المشروع الرقمي</h2>
+        <div class="credits-section">
+            <div class="credit-box">
+                <span>المطور والمصمم</span>
+                <h2>إياد السعداوي</h2>
+            </div>
+            <div class="credit-box">
+                <span>المؤسسة التعليمية</span>
+                <h2>مدرسة دبي للتربية الحديثة</h2>
+            </div>
+            <div class="credit-box">
+                <span>تحت إشراف المعلم القدير</span>
+                <h2>أ. عمرو علي</h2>
+            </div>
+        </div>
+    </section>
+
+    <!-- الفوتر -->
+    <footer>
+        <p>&copy; 2026 جميع الحقوق محفوظة | تم التطوير بكل فخر بواسطة إياد السعداوي</p>
+    </footer>
+
+</body>
+</html>
